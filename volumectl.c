@@ -63,7 +63,7 @@ void send_notification()
     pclose(bar_file);
 
     char* notify_cmd = (char*) malloc(sizeof(char) * 100); // [54 + 21] = { 0 };
-    sprintf(notify_cmd,"dunstify -r 2593 \"🔈 %d %s\"", true_vol, bar);
+    sprintf(notify_cmd,"dunstify -u low -r 2593 \"🔈 %d %s\"", true_vol, bar);
 
     system(notify_cmd);
 
